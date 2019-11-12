@@ -12,3 +12,9 @@
   text-decoration: none;
   color: black;
 }
+
+.mini-container {
+  border: 1px dashed blue;
+  margin: 5px;
+}
+
