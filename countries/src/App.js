@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        countries: []
+        countries: [],
+        singleCountry: {}
     }
 }
 
@@ -25,35 +26,51 @@ componentDidMount() {
   })
 }
 
+changeName = newName => {
+  console.log(newName, 'state name')
+  let choice = ''
+  for (let i=0; i<this.state.countries.length; i++) {
+    if (this.state.countries[i].name === newName) {
+      choice = newName
+      this.setState({ singleCountry: this.state.countries[i]})
+      console.log(choice)
+    }
+  }
+  console.log(choice)
+}
+
 render() {
   return (
     <div className="App">
     {this.state.countries.map(country => {
       return(
-        <Route key={country.alpha2Code} exact path="/" render={props => (
           <Display
-          {...props}
+          key={country.name}
+          history = {this.props.history}
           country_name = {country.name}
           capital = {country.capital}
           region = {country.region}
           subregion = {country.subregion}
+          changeName = {this.changeName}
+          // callingCodes = {country.callingCodes}
+          // currencies = {country.currencies}
+          // languages = {country.languages}
           />
         )}
-        />
       )
     })}
 
-    {this.state.countries.map(country => {
-    return(
-    <Route path='/country/:id' render={props => (
+    <Route path='/details/:name' render={props => {
+      return (
       <Zoomed
        {...props}
-       callingCodes = {country.callingCodes}
-       currencies = {country.currencies}
-       languages = {country.languages}
+       callingCodes = {this.state.singleCountry.callingCodes}
+       currencies = {this.state.singleCountry.currencies}
+       languages = {this.state.singleCountry.languages}
        />
-    )} />
-    )})}
+      )}
+    } />
+
     </div>
   );
 }

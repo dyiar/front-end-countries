@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
+import Zoomed from './components/zoomed_element';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <Router>
-    <App />
+    <Route exact path='/' render={props => <App {...props} />} />
+<Route path='/details/:name' render={props => <Zoomed {...props} />} />
   </Router>,
   document.getElementById("root")
 );
