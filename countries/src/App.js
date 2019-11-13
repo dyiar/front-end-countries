@@ -35,9 +35,9 @@ class App extends Component {
               <Route
                 exact
                 path="/"
+                key={country.name}
                 render={props => (
                   <Display
-                    key={country.name}
                     history={this.props.history}
                     country_name={country.name}
                     capital={country.capital}
