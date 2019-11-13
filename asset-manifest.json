@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dyiar/front-end-countries/static/css/main.b75d3963.chunk.css",
+    "main.js": "/dyiar/front-end-countries/static/js/main.88737188.chunk.js",
+    "main.js.map": "/dyiar/front-end-countries/static/js/main.88737188.chunk.js.map",
+    "runtime-main.js": "/dyiar/front-end-countries/static/js/runtime-main.9e9ec9d2.js",
+    "runtime-main.js.map": "/dyiar/front-end-countries/static/js/runtime-main.9e9ec9d2.js.map",
+    "static/js/2.bfd373b1.chunk.js": "/dyiar/front-end-countries/static/js/2.bfd373b1.chunk.js",
+    "static/js/2.bfd373b1.chunk.js.map": "/dyiar/front-end-countries/static/js/2.bfd373b1.chunk.js.map",
+    "index.html": "/dyiar/front-end-countries/index.html",
+    "precache-manifest.e236875ce5b96304601a9393c7f793bc.js": "/dyiar/front-end-countries/precache-manifest.e236875ce5b96304601a9393c7f793bc.js",
+    "service-worker.js": "/dyiar/front-end-countries/service-worker.js",
+    "static/css/main.b75d3963.chunk.css.map": "/dyiar/front-end-countries/static/css/main.b75d3963.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e9ec9d2.js",
+    "static/js/2.bfd373b1.chunk.js",
+    "static/css/main.b75d3963.chunk.css",
+    "static/js/main.88737188.chunk.js"
+  ]
+}
