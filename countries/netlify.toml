@@ -1,6 +1,6 @@
 [build]
-base    = "front-end/sentimentbot"
-publish = "front-end/sentimentbot/build"
+base    = "/src"
+publish = "/build"
 command = "yarn build" 
 
 [[redirects]]
